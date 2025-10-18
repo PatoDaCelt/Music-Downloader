@@ -11,7 +11,11 @@ RS = "\033[0m" #RESET
 
 # --- Configuración de la Aplicación ---
 app = Flask(__name__)
+DOWNLOAD_FOLDER = "downloads" # Define el nombre de la carpeta donde se guardarán temporalmente los archivos.
 
+# Crear la carpeta de descargas si no existe
+if not os.path.exists(DOWNLOAD_FOLDER):
+    os.makedirs(DOWNLOAD_FOLDER)
 
 # --- Rutas de la Aplicación ---
 # RUTA PRINCIPAL
@@ -33,7 +37,7 @@ def download():
         #Diccionario de opciones para yt-dlp
         ydl_opts = {
             'format': 'bestaudio/best', #Descarga el mejor audio posible.
-            'outtmpl': os.path.join('%(title)s.%(ext)s'), # El nombre del archivo se basará en el título del video.
+            'outtmpl': os.path.join(DOWNLOAD_FOLDER,'%(title)s.%(ext)s'), # El nombre del archivo se basará en el título del video.
             'noplaylist': True, #Si la URL es de una lista de reproducción, solo descargará el video individual.
         }
 
