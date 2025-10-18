@@ -1,0 +1,93 @@
+/* --- Reset básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Estilos generales --- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* --- Contenedor principal --- */
+.container {
+  text-align: center;
+  background-color: #222;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  max-width: 500px;
+}
+
+/* --- Título --- */
+.container h1 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #00ffb3;
+}
+
+/* --- Mensaje de advertencia --- */
+.alert {
+  background-color: rgba(255, 0, 0, 0.15);
+  color: #ff6666;
+  border: 1px solid #ff4d4d;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* --- Formulario --- */
+.download-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* --- Campo de texto --- */
+.url-input {
+  width: 100%;
+  max-width: 380px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.url-input:focus {
+  box-shadow: 0 0 8px #00ffb3;
+}
+
+/* --- Botón --- */
+.btn-download {
+  padding: 10px 24px;
+  font-size: 1rem;
+  background: #00ffb3;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn-download:hover {
+  background: #00d394;
+  transform: scale(1.05);
+}
+
+.btn-download:active {
+  background: #00b87f;
+  transform: scale(0.97);
+}

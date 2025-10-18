@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Descargar MP3 de YouTube</title>
-</head>
-<body style="font-family:sans-serif; text-align:center; margin-top:50px;">
-    <h1>Descargar MP3 de YouTube</h1>
-    <form method="POST" action="/download">
-        <input type="text" name="url" placeholder="Pega el enlace de YouTube aquí" style="width:300px; padding:8px;">
-        <button type="submit" style="padding:8px 16px;">Descargar</button>
-    </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Descargar Audio de YouTube</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Descargar MP3 de YouTube</h1>
+
+      {% if mensaje %}
+        <div class="alert">{{ mensaje }}</div>
+      {% endif %}
+
+      <form method="POST" action="/download" class="download-form">
+        <input
+          type="text"
+          name="url"
+          placeholder="Pega el enlace de YouTube aquí..."
+          class="url-input"
+        />
+        <button type="submit" class="btn-download">Descargar</button>
+      </form>
+    </div>
+  </body>
 </html>

@@ -2,5 +2,4 @@ downloadermusic-venv/
 __pycache__/
 *.pyc
 .vscode/
-
 downloads/
